@@ -1,0 +1,111 @@
+## create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Kasir01",
+    "email": "kasir01@gmail.com",
+    "password": "kasir01"
+}
+
+### read users
+GET http://localhost:5000/users
+
+### update user error
+PATCH http://localhost:5000/user/16588c0c-3905-4fc3-bb5a-9b0958f35c8b
+Content-Type:: application/json
+
+{
+    "name": "Kasirrrr",
+    "email": "Kasirrrr01@gmail.com"
+}
+
+###
+// delete user
+DELETE http://localhost:5000/user/16588c0c-3905-4fc3-bb5a-9b0958f35c8b
+Content-Type:: application/json
+
+###
+// login user error belum get id user di react
+POST  http://localhost:5000/login/a5d9dcb6-6b9a-48dd-8949-f3c0b9915827
+Content-Type:: application/json
+
+{
+    "email": "kasir@gmail.com",
+    "password": "kasir"
+}
+
+
+
+###
+// create kategori
+POST http://localhost:5000/kategoris
+Content-Type: application/json
+
+{
+    "nama_kategori": "Barang"
+}
+
+###
+// read kategori
+GET  http://localhost:5000/kategoris
+Content-Type: application/json
+
+###
+// update kategori
+PATCH  http://localhost:5000/kategori/9c687aba-d370-4007-88da-1d8b252e19e6
+Content-Type: application/json
+
+{
+    "nama_kategori": "Barang"
+}
+
+###
+// delete kategori
+DELETE http://localhost:5000/kategori/uuid
+Content-Type:: application/json
+
+
+###
+// create produk
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "nama_produk": "Snack Aries 80gr",
+    "harga": "1000",
+    "stok": "2",
+    "kategoriId": "2"
+}
+
+### unkown kategori id
+// read kategori
+GET  http://localhost:5000/products
+Content-Type: application/json
+
+###
+// update produk
+PATCH http://localhost:5000/product/39a5b0f1-ebf1-48ff-adb1-89a873ab752c
+Content-Type: application/json
+
+{
+    "nama_produk": "Kacang Garuda 300g",
+    "harga": "2000",
+    "stok": "4",
+    "kategoriId": "1"
+}
+
+###
+// delete produk
+DELETE http://localhost:5000/product/uuid
+Content-Type:: application/json
+
+// create penjualan
+POST http://localhost:5000/penjualans
+Content-Type: application/json
+
+{
+    "jumlah":"3",
+    "produk_id":"2",
+    "total_penjualan": "2"
+}
